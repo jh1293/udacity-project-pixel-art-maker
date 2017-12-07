@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+/* Body and Headings */
+body {
+  text-align: center;
+}
+h1 {
+  font-family: Monoton;
+  font-size: 70px;
+  margin: 0.2em;
+}
+h2 {
+  margin: 1em 0 0.5em;
+  font-family: Arial;
+  color: #222;
+  text-shadow: 1px 1px 2px #333;
+}
+ /* Grid Panel */
+.grid-panel {
+  margin-bottom: 8px;
+}
+.grid-panel div {
+  display: inline-block;
+  width: 160px;
+  height: 28px;
+  border-radius: 8px;
+}
+.canvas-height-area,
+.canvas-width-area {
+  background: #060;
+}
+.cell-size-area {
+  background: #005;
+}
+div.grid-style-area {
+  width: 192px;
+  background: #300;
+}
+label {
+  color: white;
+  font: 13px/28px Arial;
+  float: left;
+  margin-left: 12px;
+  text-shadow: 1px 1px 1px #333;
+}
+input[type="number"],
+.grid-style {
+  width: 40px;
+  height: 14px;
+  float: right;
+  margin-right: 12px;
+  border-style: none;
+  border-radius: 2px;
+  margin-top: 7px;
+}
+.grid-style {
+  width: 72px;
+}
+/* Apply Button */
+button {
+  background: #333;
+  color: white;
+  width: 196px;
+  height: 28px;
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+  margin-bottom: 8px;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #444;
+}
+button:active {
+  background: #333;
+}
+/* Color Picker*/
+.color-picker {
+  width: 24px;
+  height: 24px;
+  border: 1px solid green;
+  border-style: none;
+  padding: 0;
+  background: transparent;
+}
+/* Canvas */
+/* Canvas Style */
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+/* Cell Size */
+td {
+  height: 10px;
+  width: 10px;
+}
+/* Grid Style */
+table,
+tr,
+td {
+  border: 1px dotted #999;
+}
