@@ -8,10 +8,10 @@ button:focus {
 }
 /* Body and Headings */
 body {
-  width: 100%;
-  text-align: center;
-  margin: 0;
   background: #f0dbb2;
+  margin: 0;
+  text-align: center;
+  width: 100%;
 }
 h1 {
   font-family: Monoton;
@@ -19,26 +19,26 @@ h1 {
   margin: 0.2em;
 }
 h2 {
-  margin: 1em 0 0.5em;
-  font-family: Arial;
   color: #222;
+  font-family: Arial;
   text-shadow: 1px 1px 2px #333;
+  margin: 1em 0 0.5em;
 }
  /* Grid Panel */
 .setting-section {
-  width: 100%;
-  padding: 16px 0;
-  box-shadow: 0 0 10px 2px #0005;
   background: #fff;
+  box-shadow: 0 0 10px 2px #0005;
+  padding: 16px 0;
+  width: 100%;
 }
 .grid-panel {
   margin-bottom: 8px;
 }
 .grid-panel div {
-  display: inline-block;
-  width: 160px;
-  height: 28px;
   border-radius: 8px;
+  display: inline-block;
+  height: 28px;
+  width: 160px;
 }
 .canvas-height-area,
 .canvas-width-area {
@@ -48,25 +48,25 @@ h2 {
   background: #005;
 }
 div.grid-style-area {
-  width: 192px;
   background: #300;
+  width: 192px;
 }
 label {
   color: white;
-  font: 13px/28px Arial;
   float: left;
+  font: 13px/28px Arial;
   margin-left: 12px;
   text-shadow: 1px 1px 1px #333;
 }
 input[type="number"],
 .grid-style {
-  width: 40px;
-  height: 14px;
-  float: right;
-  margin-right: 12px;
   border-style: none;
   border-radius: 2px;
+  float: right;
+  height: 14px;
+  margin-right: 12px;
   margin-top: 7px;
+  width: 40px;
 }
 .grid-style {
   width: 72px;
@@ -74,15 +74,15 @@ input[type="number"],
 /* Apply Button */
 button {
   background: #333;
-  color: white;
-  width: 196px;
-  height: 28px;
   border: none;
   border-radius: 8px;
-  padding: 0;
+  color: white;
+  height: 28px;
   margin-top: 16px;
   margin-bottom: 8px;
+  padding: 0;
   transition: background 0.2s;
+  width: 196px;
 }
 button:hover {
   background: #444;
@@ -92,34 +92,35 @@ button:active {
 }
 /* Color Picker*/
 .color-picker {
-  width: 24px;
-  height: 24px;
+  background: transparent;
   border: 1px solid green;
   border-style: none;
+  height: 24px;
   padding: 0;
-  background: transparent;
+  width: 24px;
 }
 /* Canvas Section */
 .canvas-section {
-  display: inline-block;
   background: #fff;
-  margin: 24px 0;
-  padding: 16px;
   border-radius: 16px;
+  box-shadow: 0 0 10px 1px #0005;
+  display: inline-block;
+  margin: 24px 0;
   min-width: 500px;
   min-height: 150px;
-  box-shadow: 0 0 10px 1px #0005;
+  padding: 16px;
+
 }
 /* Canvas Style */
 table {
-  margin: 0 auto;
   border-collapse: collapse;
+  margin: 0 auto;
 }
 /* Cell Initial Size and Style */
 td {
   height: 10px;
-  width: 10px;
   transition: background 0.2s;
+  width: 10px;
 }
 /* Grid Initial Style */
 table,
