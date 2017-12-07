@@ -17,14 +17,22 @@ function makeGrid() {
 
   // Pre-calculating tr string
   let trString = '';
-  for (let row = 0; row < canvasHeight; row++) {
-    trString += '<tr></tr>'
+  if (canvasHeight > 0) {
+    for (let row = 0; row < canvasHeight; row++) {
+      trString += '<tr></tr>'
+    }
+  } else {
+      trString = '<tr></tr>'
   }
 
   // Pre-calculating td string
   let tdString = '';
-  for (let col = 0; col < canvasWidth; col++) {
-    tdString += '<td></td>'
+  if (canvasWidth > 0) {
+    for (let col = 0; col < canvasWidth; col++) {
+      tdString += '<td></td>'
+    }
+  } else {
+      tdString = '<td></td>'
   }
 
   // Appending tr string to canvas
@@ -34,8 +42,13 @@ function makeGrid() {
   $('tr').append(tdString);
 
   // Applying cell size
-  $('td').css('width', cellSize);
-  $('td').css('height', cellSize);
+  if (cellSize >= 10) {
+    $('td').css('width', cellSize);
+    $('td').css('height', cellSize);
+  } else {
+    $('td').css('width', 10);
+    $('td').css('height', 10);
+  }
 
   // Applying grid style
   switch (gridStyle) {
