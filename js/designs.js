@@ -1,38 +1,39 @@
-// Select color input
-// Select size input
-
-// Empty canvas
+/**
+* @description Initialize grid
+*/
 function initGrid() {
-  // Initialize canvas
+  // Empty canvas
   $('#canvas').empty();
 }
 
-// Make grid
+/**
+* @description Make grid
+*/
 function makeGrid() {
   // Fetch data from user input
-  let canvasHeight = $('#canvas-height').val();
-  let canvasWidth = $('#canvas-width').val();
-  let cellSize = $('#cell-size').val();
-  let gridStyle = $('#grid-style').val();
+  const canvasHeight = $('#canvas-height').val();
+  const canvasWidth = $('#canvas-width').val();
+  const cellSize = $('#cell-size').val();
+  const gridStyle = $('#grid-style').val();
 
   // Pre-calculating tr string
   let trString = '';
   if (canvasHeight > 0) {
     for (let row = 0; row < canvasHeight; row++) {
-      trString += '<tr></tr>'
+      trString += '<tr></tr>';
     }
   } else {
-      trString = '<tr></tr>'
+      trString = '<tr></tr>';
   }
 
   // Pre-calculating td string
   let tdString = '';
   if (canvasWidth > 0) {
     for (let col = 0; col < canvasWidth; col++) {
-      tdString += '<td></td>'
+      tdString += '<td></td>';
     }
   } else {
-      tdString = '<td></td>'
+      tdString = '<td></td>';
   }
 
   // Appending tr string to canvas
@@ -69,7 +70,9 @@ function makeGrid() {
   }
 }
 
-// Hovering and clicking events
+/**
+* @description Refreshing grid when hovering and clicking
+*/
 function refreshGrid() {
   // Hovering event
   // Highlighting when mouse is hovering, fading out when mouse is leaving
@@ -93,7 +96,7 @@ function refreshGrid() {
   // Changing cell color when clicking
   $('td').click(function() {
     // Get color from color picker
-    let pickedColor = $('#color-picker').val();
+    const pickedColor = $('#color-picker').val();
     // Changing color
     $(this).css('background-color', pickedColor);
     // Preventing color changed by hovering event
@@ -101,7 +104,9 @@ function refreshGrid() {
   });
 }
 
-// Main loop
+/**
+* @description Main loop
+*/
 function gridLoop() {
   initGrid();
   makeGrid();
@@ -110,3 +115,8 @@ function gridLoop() {
 
 // Button click event, triggering main loop
 $('button').click(gridLoop);
+
+// TODO: add Update Grid Feature without Broke Current Design
+// TODO: add Brush Customization
+// TODO: add Quick Eraser
+// TODO: add Export Feature
